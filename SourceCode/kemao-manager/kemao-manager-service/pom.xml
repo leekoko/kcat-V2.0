@@ -11,7 +11,7 @@
 	<dependencies>
 		<dependency>
 			<groupId>cn.kemao666</groupId>
-			<artifactId>kemao-common</artifactId>
+			<artifactId>kemao-manager-mapper</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 		<!-- Spring -->
