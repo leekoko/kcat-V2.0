@@ -1,19 +1,20 @@
-﻿<%@ page language="java" contentType="text/html; charset=utf-8"
+<%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
-<!DOCTYPE html>
-<!--[if lt IE 8]><script>window.location.href="${pageContext.request.contextPath}/error/index.jsp"</script><![endif]-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--[if lt IE 8]><script>window.location.href="${pageContext.request.contextPath}/common/error/index.jsp"</script><![endif]-->
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta charset="utf-8">
-<meta name="renderer" content="webkit|ie-comp|ie-stand">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- 渲染内核 -->
+<meta http-equiv = "X-UA-Compatible" content = "chrome=1,IE=edge" />
+<!-- 手机显示 -->
+<!-- <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">-->
 <title>K-Cat  校园资源服务网站</title>
-<meta name="keywords" content="">
-<meta name="description" content="">
+<meta name="keywords" content="广州科技贸易职业学院,科贸,信息工程学院,广州科贸,校园软件">
+<meta name="description" content="科贸校园服务网站-KcatV2.0_升级时间为2017-11-27">
 <link rel="Shortcut Icon" href="http://kcat-1251241286.cosgz.myqcloud.com/images/index/tubiao.ico">
 <script type="text/javascript" src="${pageContext.request.contextPath}/jQuery/jquery.min.1.7.1.js"></script>
+
 <script type="text/javascript">
 	jQuery(function($) {
 		$('#nav').onePageNav({
@@ -28,14 +29,10 @@
 	});
 </script> 
 
-
-
 </head>
-
 <body>
 <!-- nav开始 -->
-	
-
+<%-- <%@ include file="../common/pageheader_top.jsp" %> --%>
 	<ul id="nav" class="topnav l">
       <li class="current"><a href="#section-1" style="display:none"></a></li>
       <li><a class="juli" href="#section-2">专业软件</a></li>
@@ -45,14 +42,13 @@
       <li><a href="#section-6">校园电话</a></li>
 	  <!-- <li><a href="${pageContext.request.contextPath}/visitor/about.jsp">关于我们</a></li> -->
     </ul>
-    
-	
-<!-- nav结束 -->
+<%@ include file="../common/pageheader_bottom.jsp" %>    
 
-	
+<!-- nav结束 -->
 
 <div id="container">
   <div id="section-1" class="section"></div>
+  
   <div id="section-2" class="section">
     <div class="wp">
       <div class="tuwen">
@@ -63,7 +59,8 @@
             这里有你需要的一切课程专业软件，如果你是小白，鼠标轻轻一点，从此告别病毒，如果你是大神，鼠标轻击，告别许多烦恼。<br>
             <br>
             科猫，只为更懂你。</p>
-          <p class="btnbar"><a class="btn-buy" href="${pageContext.request.contextPath}/zhuanyeruanjian.do" target="_parent"><span class="paddingW"></span>点击进入&gt;&gt;</a></p>
+<%--           <p class="btnbar"><a class="btn-buy" href="${pageContext.request.contextPath}/zhuanyeruanjian.do" target="_parent"><span class="paddingW"></span>点击进入&gt;&gt;</a></p> --%>
+          <p class="btnbar"><a class="btn-buy" href="${pageContext.request.contextPath}/mainPage/zhuanyeruanjian" target="_parent"><span class="paddingW"></span>点击进入&gt;&gt;</a></p>
         </div>
       </div>
     </div>
@@ -127,8 +124,9 @@
         </div>
       </div>
     </div>
-  </div>
-  <!--footer部分-->
+  </div>  
+
+  <!--footer部分start-->
   <div style="height: 230px; background: #454545">
   	<div style="width: 1280px; height: 170px; margin: 0 auto; padding: 30px 0 30px 0">
   		<div style="width: 170px; height: 170px; float: left;"><img src="${pageContext.request.contextPath}/images/erweima.jpg"/></div>
@@ -161,9 +159,18 @@
   		</div>
   	</div>
   </div>
-  <!--footer END-->
-  
-  
+
+  <!--footer部分end-->
+
 </div>
+
+
+
 </body>
+<script type="text/javascript">
+	$(function(){
+		alert(1);
+	});
+</script>
+
 </html>
