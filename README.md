@@ -3,4 +3,6 @@
 
 
 
-### 1.[添加代码规则](doc/addCode.md)
+### 1.[添加代码规则](doc/addCode.md)   
+
+### 2.[规范](doc/Standard.md)

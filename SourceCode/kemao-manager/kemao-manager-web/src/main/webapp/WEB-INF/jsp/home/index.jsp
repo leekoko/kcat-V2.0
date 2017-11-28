@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
+<%@ page isELIgnored="false" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <!--[if lt IE 8]><script>window.location.href="${pageContext.request.contextPath}/common/error/index.jsp"</script><![endif]-->
 <html>
@@ -13,26 +14,27 @@
 <meta name="keywords" content="广州科技贸易职业学院,科贸,信息工程学院,广州科贸,校园软件">
 <meta name="description" content="科贸校园服务网站-KcatV2.0_升级时间为2017-11-27">
 <link rel="Shortcut Icon" href="http://kcat-1251241286.cosgz.myqcloud.com/images/index/tubiao.ico">
-<script type="text/javascript" src="${pageContext.request.contextPath}/jQuery/jquery.min.1.7.1.js"></script>
+<script type="text/javascript" src="/js/jQuery/jquery.min.1.7.1.js"></script>
 
 <script type="text/javascript">
 	jQuery(function($) {
+		/*使用onePageNav插件*/
 		$('#nav').onePageNav({
-	    begin: function() {
-		  	console.log('start');
-	    },
-	    end: function() {
-		  console.log('stop');
-	    },
-		scrollOffset: 30
-	  });
+		    begin: function() {
+			  	console.log('start');
+		    },
+		    end: function() {
+			  console.log('stop');
+		    },
+			scrollOffset: 30
+	    });
 	});
 </script> 
 
 </head>
 <body>
 <!-- nav开始 -->
-<%-- <%@ include file="../common/pageheader_top.jsp" %> --%>
+<%@ include file="../common/pageheader_top.jsp" %> 
 	<ul id="nav" class="topnav l">
       <li class="current"><a href="#section-1" style="display:none"></a></li>
       <li><a class="juli" href="#section-2">专业软件</a></li>
@@ -59,8 +61,7 @@
             这里有你需要的一切课程专业软件，如果你是小白，鼠标轻轻一点，从此告别病毒，如果你是大神，鼠标轻击，告别许多烦恼。<br>
             <br>
             科猫，只为更懂你。</p>
-<%--           <p class="btnbar"><a class="btn-buy" href="${pageContext.request.contextPath}/zhuanyeruanjian.do" target="_parent"><span class="paddingW"></span>点击进入&gt;&gt;</a></p> --%>
-          <p class="btnbar"><a class="btn-buy" href="${pageContext.request.contextPath}/mainPage/zhuanyeruanjian" target="_parent"><span class="paddingW"></span>点击进入&gt;&gt;</a></p>
+          <p class="btnbar"><a class="btn-buy" href="${pageContext.request.contextPath}/majorSoft/toMajorSoft" target="_parent"><span class="paddingW"></span>点击进入&gt;&gt;</a></p>
         </div>
       </div>
     </div>
@@ -169,7 +170,7 @@
 </body>
 <script type="text/javascript">
 	$(function(){
-		alert(1);
+		/* alert("${pageContext.request.contextPath}"); */
 	});
 </script>
 

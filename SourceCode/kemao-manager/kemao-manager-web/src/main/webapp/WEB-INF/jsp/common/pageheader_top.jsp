@@ -4,12 +4,15 @@
 	<link href="${pageContext.request.contextPath}/css/style.css" rel="stylesheet" type="text/css">
     <link href="${pageContext.request.contextPath}/css/nav.css" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/base/jquery.ui.css"/>
-	<script type="text/javascript" src="${pageContext.request.contextPath}/jQuery/jquery.cookie.js"></script>
-	<script type="text/javascript" src="${pageContext.request.contextPath}/jQuery/jquery.ui.js"></script>
-	<script type="text/javascript" src="${pageContext.request.contextPath}/jQuery/jquery.form.js"></script>
-	<script type="text/javascript" src="${pageContext.request.contextPath}/jQuery/jquery.validate.js"></script>
-	<script type="text/javascript" src="${pageContext.request.contextPath}/jQuery/jquery.scrollTo.js"></script> 
-	<script type="text/javascript" src="${pageContext.request.contextPath}/jQuery/jquery.nav.js"></script>
+	
+	<script type="text/javascript" src="/js/jQuery/jquery.js"></script>
+	
+	<script type="text/javascript" src="/js/jQuery/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/js/jQuery/jquery.ui.js"></script>
+	<script type="text/javascript" src="/js/jQuery/jquery.form.js"></script>
+	<script type="text/javascript" src="/js/jQuery/jquery.validate.js"></script>
+	<script type="text/javascript" src="/js/jQuery/jquery.scrollTo.js"></script> 
+	<script type="text/javascript" src="/js/jQuery/jquery.nav.js"></script>
 
 	<script type="text/javascript">
 		$(function () {

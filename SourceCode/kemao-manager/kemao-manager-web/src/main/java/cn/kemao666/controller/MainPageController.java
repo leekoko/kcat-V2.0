@@ -1,17 +1,15 @@
 package cn.kemao666.controller;
-
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-
+/**
+ * leeyubin
+ * 2017-11-27
+ * 首页Controller
+ */
 @Controller
 @RequestMapping("/mainPage")
 public class MainPageController {
-	@RequestMapping("zhuanyeruanjian")
-	public String getItemById(){
-		
-		return "home/zhuanyeruanjian";
-	}
+
 	
 
 }

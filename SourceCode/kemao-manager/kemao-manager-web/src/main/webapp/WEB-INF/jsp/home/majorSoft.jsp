@@ -1,16 +1,16 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
     
-<!--[if lt IE 8]><script>window.location.href="${pageContext.request.contextPath}/error/index.jsp"</script><![endif]-->
+<!--[if lt IE 8]><script>window.location.href="${pageContext.request.contextPath}/common/error/index.jsp"</script><![endif]-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>专业软件</title>
-<link rel="Shortcut Icon" href="${pageContext.request.contextPath}/images/tubiao.ico">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/CSS/zyrj.css" type="text/css" />
-<script type="text/javascript" src="${pageContext.request.contextPath}/jQuery/jquery.js"></script>
-<script type="text/javascript" src="${pageContext.request.contextPath}/jQuery/jquery.min.js"></script> 
+<link rel="Shortcut Icon" href="http://kcat-1251241286.cosgz.myqcloud.com/images/index/tubiao.ico">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/zyrj.css" type="text/css" />
+<%-- <script type="text/javascript" src="${pageContext.request.contextPath}/jQuery/jquery.js"></script> --%>
+<%-- <script type="text/javascript" src="${pageContext.request.contextPath}/jQuery/jquery.min.js"></script>  --%>
 <script type="text/javascript" src="${pageContext.request.contextPath}/jQuery/jquery.SuperSlide.min.js"></script>
 </head>
 
@@ -48,13 +48,15 @@
     </div>
 <!--main区域  end-->
 </div>
+
+
 <script type="text/javascript">
 $(function(){
 	var html="";
 	$.ajaxSetup({async:false});
 	
 	html="<div class='slider'><div class='bd bg-fff'><ul>";
-	$.post("${pageContext.request.contextPath}/getStudySoft_b.do",function(data){
+	$.post("${pageContext.request.contextPath}/majorSoft/getStudySoft_b",function(data){
 		$.each(data,function(i,e){	
 			html+="<li><img src='http://kcat-1251241286.cosgz.myqcloud.com/images/"+data[i].jpg+"'></li>";
 		});
@@ -65,6 +67,10 @@ $(function(){
 		html+="</ol></div>";
 		$(".bg-fff").append(html);
 	});
+	
+	
+	
+	
 	jQuery("#slider-1 .slider").slide({
 		mainCell:".bd ul",titCell:".hd li",
 		trigger:"click",
