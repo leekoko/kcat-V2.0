@@ -342,33 +342,6 @@
 			
 			$('.reg').buttonset();
 			
-		//	日历UI插件
-		//	$('#date').datepicker({		//引入日历插件，中文包位置：jquery-ui-1.10.4.custom/development-bundle/ui/i18n
-		//		changeYear : true,
-		//		changeMonth : true,
-		//		showOn : 'button',
-		//		buttonImage : 'images/nav/calendar.gif',
-		//		buttonImageOnly : true,
-		//		maxDate : 5,			限定最大日期			
-		//		minDate : -5,		限定最小日期
-		//		hideIfNoPrevNext : true,
-		//		yearRange : '1980 : 2020',
-		//		yearSuffix : '',		//去掉选择时的'年'字符导致换行的情况出现
-		//		日期的优先级：maxDate和minDate最高，而yearRange对年份限定优先级高
-		//	});	
-			
-		//	工具提示功能，需要配合html页面的title属性来使用
-		//	$('.reg input[title]').tooltip({
-		//		tooltipClass : 'a',  用于更改title的样式，可在css中自定义样式
-		//		position : {
-		//			my : 'left center',
-		//			at : 'right+5 center',
-		//		},
-		//		//默认提示是淡入淡出效果，项目中应去掉
-		//		show : false,
-		//		hide : false,
-		//	});
-			
 		//	邮箱自动补全功能模块
 			$('#email').autocomplete({
 				delay : 0,

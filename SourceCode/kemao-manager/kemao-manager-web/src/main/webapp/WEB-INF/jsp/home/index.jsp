@@ -100,13 +100,13 @@
     <div class="wp">
       <div class="tuwen">
         <div class="tuwennr r">
-          <h2 class="title">帮帮帮</h2>
+          <h2 class="title">慕课视频</h2>
           <p class="info">电脑又自启了？　/　网线连不上？<br>
             <br>
             Photoshop，Dreamweaver，JAVA。。。来到帮帮帮，请各位专业老师免费教学，更多配套资源供你学习。 <br>
             <br>
             科猫，只为更懂你。</p>
-          <p class="btnbar"><a class="btn-buy" href="${pageContext.request.contextPath}/bang.do" target="_parent"><span class="paddingW"></span>点击进入&gt;&gt;</a></p>
+          <p class="btnbar"><a class="btn-buy" href="${pageContext.request.contextPath}/freeMooc/toFreeMooc" target="_parent"><span class="paddingW"></span>点击进入&gt;&gt;</a></p>
         </div>
       </div>
     </div>

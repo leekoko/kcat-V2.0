@@ -2,13 +2,14 @@
 
 .project
 
-
+.idea/
 
 
 # 忽略 eclipse创建的 .metadata/ 文件夹
 
 .metadata/
 
+.recommenders/
 
 
 
@@ -36,3 +37,4 @@ target/
 
 *.classpath
 
+apache-tomcat-8.0.30/

@@ -5,4 +5,7 @@
 
 ### 1.[添加代码规则](doc/addCode.md)   
 
-### 2.[规范](doc/Standard.md)
+### 2.[规范](doc/Standard.md)    
+
+### 3.[数据库设计](doc/datebase.md)   
+
