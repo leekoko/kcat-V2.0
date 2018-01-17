@@ -2,7 +2,8 @@
     pageEncoding="utf-8"%>
 <%@ page isELIgnored="false" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<!--[if lt IE 8]><script>window.location.href="${pageContext.request.contextPath}/common/error/index.jsp"</script><![endif]-->
+<!--[if lt IE 8]><script>window.location.href="${pageContext.request.contextPath}/error/index.jsp"</script><![endif]-->
+
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -13,21 +14,13 @@
 <title>K-Cat  校园资源服务网站</title>
 <meta name="keywords" content="广州科技贸易职业学院,科贸,信息工程学院,广州科贸,校园软件">
 <meta name="description" content="科贸校园服务网站-KcatV2.0_升级时间为2017-11-27">
+<script type="text/javascript" src="${pageContext.request.contextPath}/js/jQuery/jquery-1.8.3.min.js"></script>
 <link rel="Shortcut Icon" href="http://kcat-1251241286.cosgz.myqcloud.com/images/index/tubiao.ico">
-<script type="text/javascript" src="/js/jQuery/jquery.min.1.7.1.js"></script>
 
 <script type="text/javascript">
-	jQuery(function($) {
-		/*使用onePageNav插件*/
-		$('#nav').onePageNav({
-		    begin: function() {
-			  	console.log('start');
-		    },
-		    end: function() {
-			  console.log('stop');
-		    },
-			scrollOffset: 30
-	    });
+	/*使用onePageNav插件*/
+	$(function(){
+	    $('#nav').onePageNav();
 	});
 </script> 
 
@@ -61,7 +54,7 @@
             这里有你需要的一切课程专业软件，如果你是小白，鼠标轻轻一点，从此告别病毒，如果你是大神，鼠标轻击，告别许多烦恼。<br>
             <br>
             科猫，只为更懂你。</p>
-          <p class="btnbar"><a class="btn-buy" href="${pageContext.request.contextPath}/majorSoft/toMajorSoft" target="_parent"><span class="paddingW"></span>点击进入&gt;&gt;</a></p>
+          <p class="btnbar"><a class="btn-buy" href="${pageContext.request.contextPath}/majorSoft" target="_parent"><span class="paddingW"></span>点击进入&gt;&gt;</a></p>
         </div>
       </div>
     </div>
@@ -106,7 +99,7 @@
             Photoshop，Dreamweaver，JAVA。。。来到帮帮帮，请各位专业老师免费教学，更多配套资源供你学习。 <br>
             <br>
             科猫，只为更懂你。</p>
-          <p class="btnbar"><a class="btn-buy" href="${pageContext.request.contextPath}/freeMooc/toFreeMooc" target="_parent"><span class="paddingW"></span>点击进入&gt;&gt;</a></p>
+          <p class="btnbar"><a class="btn-buy" href="${pageContext.request.contextPath}/freeMooc" target="_parent"><span class="paddingW"></span>点击进入&gt;&gt;</a></p>
         </div>
       </div>
     </div>
@@ -166,12 +159,6 @@
 </div>
 
 
-
 </body>
-<script type="text/javascript">
-	$(function(){
-		/* alert("${pageContext.request.contextPath}"); */
-	});
-</script>
 
 </html>

@@ -11,7 +11,7 @@
 		</commentGenerator>
 		<!--数据库连接的信息：驱动类、连接地址、用户名、密码 -->
 		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
-			connectionURL="jdbc:mysql://localhost:3306/kcat" userId="root"
+			connectionURL="jdbc:mysql://localhost:3306/kcatv2" userId="root"
 			password="123456">
 		</jdbcConnection>
 		<!-- 默认false，把JDBC DECIMAL 和 NUMERIC 类型解析为 Integer，为 true时把JDBC DECIMAL 和 
@@ -42,20 +42,10 @@
 			<property name="enableSubPackages" value="false" />
 		</javaClientGenerator>
 		<!-- 指定数据库表 -->
-		<table schema="" tableName="admin"></table>
-		<table schema="" tableName="bang"></table>
-		<table schema="" tableName="bang_title"></table>
-		<table schema="" tableName="soft"></table>
-		<table schema="" tableName="user"></table>
-		<table schema="" tableName="xiaoyuandianhua"></table>
-		<table schema="" tableName="xiaoyuandianhua_cg"></table>
-		<table schema="" tableName="ylsoftware"></table>
-		<table schema="" tableName="ylsoftware_title"></table>
-		<table schema="" tableName="zuoyefuzhu"></table>
-		<table schema="" tableName="zuoyefuzhu_cg"></table>
-		<table schema="" tableName="zysoftware"></table>
-		<table schema="" tableName="zysoftware_titleb"></table>
-		<table schema="" tableName="zysoftware_titles"></table>
+		<table schema="" tableName="bigtype"></table>
+		<table schema="" tableName="freemooc"></table>
+		<table schema="" tableName="type"></table>
+
 
 	</context>
 </generatorConfiguration>
