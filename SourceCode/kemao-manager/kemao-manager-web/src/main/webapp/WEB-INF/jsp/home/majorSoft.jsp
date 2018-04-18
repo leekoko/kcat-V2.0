@@ -1,4 +1,6 @@
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>  <!-- jstl -->
+
 <!--[if lt IE 8]><script>window.location.href="${pageContext.request.contextPath}/common/error/index.jsp"</script><![endif]-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -16,6 +18,8 @@
 <script src="https://code.jquery.com/jquery.js"></script>
 <!-- 包括所有已编译的插件 -->
 <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
 <style type="text/css">
 .ruanjian{
 	float: left;
@@ -40,6 +44,10 @@
 	font-size: 12px;
 	color:#b4adad;
 	font-weight: 800;
+	margin-top:10px;
+}
+#majorList li{
+	margin-top:10px;
 }
 </style>	
 </head>
@@ -68,82 +76,38 @@
         <a id="elevator" onclick="return false;" title="回到顶部"></a>
 		</div>
 	<!-- 右边固定的导航end--> --%>
-	
-		<h1 class="typeName">计算机应用</h1>
 		<div class="col-md-10">
-			<div class="row"> 
-				<div class="col-md-3">
-					<div class="col-md-4">
-						<img src="http://kcat-1251241286.cosgz.myqcloud.com/images/Sjy17.png" class="ruanjian">
-					</div>
-					<div class="col-md-8">
-						<p class="title">Android ADT</p>
-						</br>
-						<a class="down_btn">下载</a>
-					</div>
+			<c:forEach items="${major}" var="item" varStatus="i"> 
+			<div class="typeName">${item}</div>   <!-- 大标题 -->
+				<div class="row">
+					<c:forEach begin="1" end="${softwareLists.get(i.count-1).size()}" var="software"  varStatus="j" step="1"> 
+						<div class="col-md-3">
+							<div class="col-md-4">
+								<img src="http://kcat-1251241286.cosgz.myqcloud.com/images/Sjy17.png" class="ruanjian">
+							</div>
+							<div class="col-md-8">
+								<p class="title">${softwareLists.get(i.count-1).get(j.count-1) }</p>
+								</br>
+								<a class="down_btn">下载</a>
+							</div>
+						</div>
+					</c:forEach>  
 				</div>
-				<div class="col-md-3">
-					<div class="col-md-4">
-						<img src="http://kcat-1251241286.cosgz.myqcloud.com/images/Sjy17.png" class="ruanjian">
-					</div>
-					<div class="col-md-8">
-						<p class="title">Android ADT</p>
-						</br>
-						<a class="down_btn">下载</a>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="col-md-4">
-						<img src="http://kcat-1251241286.cosgz.myqcloud.com/images/Sjy17.png" class="ruanjian">
-					</div>
-					<div class="col-md-8">
-						<p class="title">Android ADT</p>
-						</br>
-						<a class="down_btn">下载</a>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="col-md-4">
-						<img src="http://kcat-1251241286.cosgz.myqcloud.com/images/Sjy17.png" class="ruanjian">
-					</div>
-					<div class="col-md-8">
-						<p class="title">Android ADT</p>
-						</br>
-						<a class="down_btn">下载</a>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="col-md-4">
-						<img src="http://kcat-1251241286.cosgz.myqcloud.com/images/Sjy17.png" class="ruanjian">
-					</div>
-					<div class="col-md-8">
-						<p class="title">Android ADT</p>
-						</br>
-						<a class="down_btn">下载</a>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="col-md-4">
-						<img src="http://kcat-1251241286.cosgz.myqcloud.com/images/Sjy17.png" class="ruanjian">
-					</div>
-					<div class="col-md-8">
-						<p class="title">Android ADT</p>
-						</br>
-						<a class="down_btn">下载</a>
-					</div>
-				</div>
-			</div>
-			
-			
+			</c:forEach>
 		</div>
+		 
+			
 		
 		<!-- 右边导航模块 -->
-		<div class="col-md-2" style="background:blue;">
-			<h1>bootstrap实战课程等你来战！</h1>
-			<p>
-						本套课程适用于：1.WEB开发人员；2.网站维护人员、管理人员<br />
-						培训技能的目标：使用bootstrap框架快速构建响应式网页，颠覆传统WEB前端！
-			</p>
+		<div style="font-weight: 800;color:#b4adad;">快速链接</div>
+		<div class="col-md-2" style="border-top-style: solid;border-color: #e4e4e4;border-top-width: 1px;margin-top:15px;">
+	
+    		<ul id="majorList">
+    			<c:forEach items="${major}" var="item" varStatus="i"> 
+					<li>${item}</li>
+    			</c:forEach>
+			</ul>
+			
 		</div>
 	
     </div>
@@ -153,91 +117,9 @@
 
 <script type="text/javascript">
 $(function(){
-/* 	var html="";
- 	$.post("${pageContext.request.contextPath}/getStudySoftB.do",function(data){
-		$.each(data,function(i,e){	
-			html+="<div class='zuo'><div class='nav_b'><ul><li class='xueyuan'>"+data[i].titleBName+"</li></ul></div>";
-			$.post("${pageContext.request.contextPath}/getStudySoftS.do",{'titleS_to_titleB':data[i].id},function(data_2){  //循环小标题
-				$.each(data_2,function(j,f){
-					html+="<div style='padding-top:60px;' class='zhuanye' id='ac"+data_2[j].id+"'><p>"+data_2[j].titleSName+"</p><img src='${pageContext.request.contextPath}/images/hr.png' class='hr'>";
-					$.post("${pageContext.request.contextPath}/getStudySoft.do",{'soft_to_titleS':data_2[j].id},function(data_3){  //循环软件内容
-						$.each(data_3,function(k,g){
-							var href = "${pageContext.request.contextPath}/getStudySoft_All.do?num="+data_3[k].id;
-							html+="<div class='ruanjian'><a href='"+href+"' target='_blank'><img src='http://kcat-1251241286.cosgz.myqcloud.com/images/"+data_3[k].softImage+"'/></a>";
-							html+="<a href='"+href+"' target='_blank'><p class='big'>"+data_3[k].softName+"</p></a>";
-							html+="<p class='small'>"+data_3[k].softType+"</p><a href='"+href+"' target='_blank'><img src='${pageContext.request.contextPath}/images/bxiazai.png' class='xiazai'/></a></div>";
-						});
-					});
-					html+="</div>";
-				});
-			});
-			html+="</div>";
-		});
-		$(".main").append(html); 
-	}); */
- 	
 	
 });
 
-/* $(function(){
-	$.ajaxSetup({async:false});
-	
-	html="";
- 	
-	$.ajaxSetup({async:false});
- 	$.post("${pageContext.request.contextPath}/getStudySoftB.do",function(data){
-		$.each(data,function(i,e){	
-			html+="<div class='zuo'><div class='nav_b'><ul><li class='xueyuan'>"+data[i].titleBName+"</li></ul></div>";
-			$.post("${pageContext.request.contextPath}/getStudySoftS.do",{'titleS_to_titleB':data[i].id},function(data_2){  //循环小标题
-				$.each(data_2,function(j,f){
-					html+="<div style='padding-top:60px;' class='zhuanye' id='ac"+data_2[j].id+"'><p>"+data_2[j].titleSName+"</p><img src='${pageContext.request.contextPath}/images/hr.png' class='hr'>";
-					$.post("${pageContext.request.contextPath}/getStudySoft.do",{'soft_to_titleS':data_2[j].id},function(data_3){  //循环软件内容
-						$.each(data_3,function(k,g){
-							var href = "${pageContext.request.contextPath}/getStudySoft_All.do?num="+data_3[k].id;
-							html+="<div class='ruanjian'><a href='"+href+"' target='_blank'><img src='http://kcat-1251241286.cosgz.myqcloud.com/images/"+data_3[k].softImage+"'/></a>";
-							html+="<a href='"+href+"' target='_blank'><p class='big'>"+data_3[k].softName+"</p></a>";
-							html+="<p class='small'>"+data_3[k].softType+"</p><a href='"+href+"' target='_blank'><img src='${pageContext.request.contextPath}/images/bxiazai.png' class='xiazai'/></a></div>";
-						});
-					});
-					html+="</div>";
-				});
-			});
-			html+="</div>";
-		});
-		$(".main").append(html); 
-	});
- 	
- 	
-});
-
-
- $(function(){ 
-	$(".toggle dd").hide(); 
-	$(".toggle dt").click(function(){ 
-		$(".toggle dd").not($(this).next()).hide(); 
-		$(".toggle dt").not($(this).next()).removeClass("current"); 
-		$(this).next().slideToggle(100); 
-		$(this).toggleClass("current"); 
-	}); 
-});
- 
-$(function() {
-	$(window).scroll(function(){
-		var scrolltop=$(this).scrollTop();		
-		if(scrolltop>=700){		
-			$("#elevator_item").show();
-		}else{
-			$("#elevator_item").hide();
-		}
-	});		
-	$("#elevator").click(function(){
-		$("html,body").animate({scrollTop: 0}, 500);	
-	});
-	 $(".active_gun").click(function(){
-		 $("html,body").animate({scrollTop:$("#ac"+this.id.substring(6)).offset().top}, 800);
-	});
-});
-*/
 </script>
 </body>
 </html>
