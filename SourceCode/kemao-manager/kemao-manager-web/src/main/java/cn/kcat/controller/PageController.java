@@ -85,4 +85,25 @@ public class PageController {
 	}	
 	
 	
+	
+	//---------后台页面-------------------
+	/**
+	 * 跳转到后台首页
+	 * @return
+	 */
+	@RequestMapping("/admin")
+	public String toAdminIndex(){
+		return "backstage/index";
+	}
+	
+	/**
+	 * 跳转到内容管理页
+	 * @return
+	 */
+	@RequestMapping("/content")
+	public String toContent(){
+		return "backstage/content";
+	}
+	
+	
 }

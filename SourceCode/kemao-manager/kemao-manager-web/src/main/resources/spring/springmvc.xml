@@ -19,5 +19,8 @@
 	<mvc:resources location="/WEB-INF/css/" mapping="/css/**"/>
 	<mvc:resources location="/WEB-INF/js/" mapping="/js/**"/>
 	<mvc:resources location="/WEB-INF/images/" mapping="/images/**"/>
-	
+	<!-- 后台资源映射 -->
+	<mvc:resources location="/WEB-INF/jsp/backstage/css/" mapping="/jsp/backstage/css/**"/>
+	<mvc:resources location="/WEB-INF/jsp/backstage/js/" mapping="/jsp/backstage/js/**"/>
+	<mvc:resources location="/WEB-INF/jsp/backstage/images/" mapping="/jsp/backstage/images/**"/>
 </beans>
