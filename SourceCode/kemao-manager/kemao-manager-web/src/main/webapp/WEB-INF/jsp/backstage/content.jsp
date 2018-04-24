@@ -16,7 +16,7 @@
 		<script src="https://code.jquery.com/jquery.js"></script>
 <!-- 包括所有已编译的插件 -->
 		<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-		<link rel="stylesheet" href="${pageContext.request.contextPath}/jsp/backstage/css/bootstrap-maizi.css" /> <!-- 覆盖原生样式-->
+		<link rel="stylesheet" href="${pageContext.request.contextPath}/css/bootstrap-maizi.css" /> <!-- 覆盖原生样式-->
 	</head>
 	
 	<body>

@@ -27,37 +27,14 @@ import cn.kcat.pojo.MajorsoftExample;
  */
 @Controller
 public class PageController {
-	
-	@Autowired
-	MajorMapper majorMapper;
-	@Autowired
-	MajorsoftMapper majorsoftMapper;
-	
-	/**
-	 * @author liyb
-	 * 2018-01-12
-	 * 跳转到首页
-	 * @return
-	 */
-	@RequestMapping("/")
-	public String showIndex(){
-		return "home/index";
-	}
-	/**
-	 * 打开其他页面
-	 */
-/*	@RequestMapping("/{page}")
-	public String showPage(@PathVariable String page,Model model){
-		return "/home/"+page;
-	}	
-*/	
+
 	/**
 	 * 跳转到专业软件页面
 	 * 2018-04-18
 	 * @param model
 	 * @return
 	 */
-	@RequestMapping("/majorSoft")
+/*	@RequestMapping("/majorSoft")
 	public String showPage(Model model){
 		
 		MajorExample majorExample = new MajorExample();
@@ -82,7 +59,7 @@ public class PageController {
 		
 		model.addAttribute("softwareLists", softwareLists);
 		return "home/majorSoft";
-	}	
+	}	*/
 	
 	
 	
@@ -91,7 +68,7 @@ public class PageController {
 	 * 跳转到后台首页
 	 * @return
 	 */
-	@RequestMapping("/admin")
+	@RequestMapping("/")
 	public String toAdminIndex(){
 		return "backstage/index";
 	}
@@ -105,5 +82,12 @@ public class PageController {
 		return "backstage/content";
 	}
 	
+	/**
+	 * 打开其他页面
+	 */
+	@RequestMapping("/{page}")
+	public String showPage(@PathVariable String page){
+		return "/backstage/"+page;
+	}	
 	
 }

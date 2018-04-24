@@ -16,9 +16,9 @@
 		<script src="https://code.jquery.com/jquery.js"></script>
 <!-- 包括所有已编译的插件 -->
 		<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-		<link rel="stylesheet" href="${pageContext.request.contextPath}/jsp/backstage/css/bootstrap-maizi.css" /> <!-- 覆盖原生样式-->
-		<script src="${pageContext.request.contextPath}/jsp/backstage/js/Chart.js"></script>
-		<script src="${pageContext.request.contextPath}/jsp/backstage/js/script.js"></script>
+		<link rel="stylesheet" href="${pageContext.request.contextPath}/css/bootstrap-maizi.css" /> <!-- 覆盖原生样式-->
+		<script src="${pageContext.request.contextPath}/js/Chart.js"></script>
+		<script src="${pageContext.request.contextPath}/js/script.js"></script>
 		
 	</head>
 	
@@ -208,7 +208,7 @@
 								<div class="media well"> <!-- well为边框-->
 									<div class="media-left">
 										<a href="#">
-											<img class="media-object ph64" src="${pageContext.request.contextPath}/jsp/backstage/images/a.png" alt="卓大哥">
+											<img class="media-object ph64" src="${pageContext.request.contextPath}/images/a.png" alt="卓大哥">
 										</a>
 									</div>
 									<div class="media-body">
@@ -224,7 +224,7 @@
 									</div>
 									<div class="media-right">
 										<a href="#">
-											<img class="media-object ph64" src="${pageContext.request.contextPath}/jsp/backstage/images/i.png" alt="卓大哥">
+											<img class="media-object ph64" src="${pageContext.request.contextPath}/images/i.png" alt="卓大哥">
 										</a>
 									</div>
 								</div>
@@ -236,7 +236,7 @@
 									</div>
 									<div class="media-right">
 										<a href="#">
-											<img class="media-object ph64" src="${pageContext.request.contextPath}/jsp/backstage/images/i.png" alt="卓大哥">
+											<img class="media-object ph64" src="${pageContext.request.contextPath}/images/i.png" alt="卓大哥">
 										</a>
 									</div>
 								</div>
@@ -244,7 +244,7 @@
 								<div class="media well">
 									<div class="media-left">
 										<a href="#">
-											<img class="media-object ph64" src="${pageContext.request.contextPath}/jsp/backstage/images/a.png" alt="卓大哥">
+											<img class="media-object ph64" src="${pageContext.request.contextPath}/images/a.png" alt="卓大哥">
 										</a>
 									</div>
 									<div class="media-body">

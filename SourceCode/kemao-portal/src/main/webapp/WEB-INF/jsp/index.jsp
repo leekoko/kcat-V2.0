@@ -27,7 +27,7 @@
 </head>
 <body>
 <!-- nav开始 -->
-<%@ include file="../common/pageheader_top.jsp" %> 
+<%@ include file="common/pageheader_top.jsp" %> 
 	<ul id="nav" class="topnav l">
       <li class="current"><a href="#section-1" style="display:none"></a></li>
       <li><a class="juli" href="#section-2">专业软件</a></li>
@@ -37,7 +37,7 @@
       <li><a href="#section-6">校园电话</a></li>
 	  <!-- <li><a href="${pageContext.request.contextPath}/visitor/about.jsp">关于我们</a></li> -->
     </ul>
-<%@ include file="../common/pageheader_bottom.jsp" %>    
+<%@ include file="common/pageheader_bottom.jsp" %>    
 
 <!-- nav结束 -->
 
@@ -54,7 +54,7 @@
             这里有你需要的一切课程专业软件，如果你是小白，鼠标轻轻一点，从此告别病毒，如果你是大神，鼠标轻击，告别许多烦恼。<br>
             <br>
             科猫，只为更懂你。</p>
-          <p class="btnbar"><a class="btn-buy" href="${pageContext.request.contextPath}/majorSoft" target="_parent"><span class="paddingW"></span>点击进入&gt;&gt;</a></p>
+          <p class="btnbar"><a class="btn-buy" href="${pageContext.request.contextPath}/majorSoft.html" target="_parent"><span class="paddingW"></span>点击进入&gt;&gt;</a></p>
         </div>
       </div>
     </div>

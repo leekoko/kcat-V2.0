@@ -55,9 +55,9 @@
 <body>
 <div class="all">
 <!--导航部分-->
-	<%@ include file="../common/pageheader_top.jsp" %>
-	<%@ include file="../common/pageheader_centenr.jsp" %>
-	<%@ include file="../common/pageheader_bottom.jsp" %>
+	<%@ include file="common/pageheader_top.jsp" %>
+	<%@ include file="common/pageheader_centenr.jsp" %>
+	<%@ include file="common/pageheader_bottom.jsp" %>
 <!--导航部分end-->
 
 <!-- banner -->

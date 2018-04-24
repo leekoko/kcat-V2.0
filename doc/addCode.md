@@ -108,6 +108,15 @@ Z:传标题List和软件List过来，软件List需要两层
 			</c:forEach>
 ```
 
+M:为什么我指定里边的资源，一直显示不出来，console报错``GET http://localhost:8080/jsp/backstage/css/bootstrap-maizi.css net::ERR_ABORTED``    
+
+Z:主要是因为资源映射没有配置好，在xml文件中配置指定的资源位置ssm才能访问到
+
+```xml
+	<!-- 后台资源映射 -->
+	<mvc:resources location="/WEB-INF/jsp/backstage/css/" mapping="/jsp/backstage/css/**"/>
+```
+
 
 
 
