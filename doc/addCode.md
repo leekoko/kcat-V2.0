@@ -119,12 +119,6 @@ Z:主要是因为资源映射没有配置好，在xml文件中配置指定的资
 
 
 
-
-
-
-
-
-
 Z：注意，旧的  bigtype ， freemooc，type 三个表的id还是用int
 
 
